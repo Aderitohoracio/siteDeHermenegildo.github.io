@@ -1,0 +1,29 @@
+.header {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-top: 100px;
+}
+
+@media (max-width: 600px) {
+.header {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+}
+
+@media (max-width: 500px) {
+    .tamanho {
+        width: 200px;
+    }
+}
+
+@media (max-width: 300px) {
+    .tamanho {
+        width: 100px;
+    }
+}

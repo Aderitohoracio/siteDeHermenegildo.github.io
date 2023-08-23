@@ -1,0 +1,20 @@
+/*botao*/
+.botao {
+    background-color: #ddd121;
+    color: #000000;
+    padding:15px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 30px 0px;
+    }
+    
+    .botao-sg {
+        padding: 16px 0px;
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+    
+    .botao:hover {
+    background-color: #8b8314;
+    }

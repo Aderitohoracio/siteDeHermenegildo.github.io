@@ -1,6 +1,7 @@
 @import "./css/global.css";
-@import "./css/header.css";
-@import "./css/conteudoPrincipal.css";
-@import "./css/utilidades.css";
-@import "./css/conteudoSecundario.css";
+@import "./css/mainContent.css";
+@import "./css/utilities.css";
+@import "./css/content.css";
 @import "./css/footer.css";
+@import "./css/responsive.css";
+@import "./css/form.css"

@@ -4,88 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário</title>
+  <link rel="stylesheet" href="../style.css">
   <style>
-    body {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to right, rgb(20, 50, 220), rgb(17, 25, 71));
-}
 .box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0 0 0 0.6);
-  padding: 15px;
-  border-radius: 15px;
+max-width: 400px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 140px;
 }
 fieldset {
-  border: 3px solid dodgerblue;
+border: 3px solid #60640c;
+box-shadow: 0 0 15px #eaf60f;
 }
 legend {
-  border: 1px solid dodgerblue;
-  padding: 10px;
-  text-align: center;
-  background-color: dodgerblue;
-  border-radius: 5px;
-  }
-  .inputBox {
-    position: relative;
-  }
+background-color: #ddd121;
+color: #000000;
+padding:12px;
+border-radius: 4px;
+margin: 14px 0px;
+text-align: center;
+}
+.inputBox {
+position: relative;
+}
+.inputUser {
+background: none;
+border: none;
+border-bottom: 1px solid rgb(99, 78, 21);
+outline: none;
+color: white;
+font-size: 15px;
+width: 100%;
+letter-spacing: 2px;
+}
+.label {
+position: absolute;
+top: 0;
+left: 0;
+pointer-events: none;
+transition: .5s;
+}
+.inputUser:focus ~ .label,
+.inputUser:valid ~ .label {
+top: -20px;
+font-size: 12px;
+color: rgb(163, 241, 179);
+}
+.submit {
+background-color: rgb(255, 238, 0);
+width: 100%;
+border: none;
+padding: 15px;
+color: rgb(0, 0, 0);
+font-size: 15px;
+cursor: pointer;
+border-radius: 10px;
+font-size: 20px;
+}
+.submit:hover {
+background: #5f6222;
+}
+@media (max-width: 500px) {
+  .box {
+max-width: 300px;
+}
+}
 
-  .inputUser {
-    background: none;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    color: white;
-    font-size: 15px;
-    width: 100%;
-    letter-spacing: 2px;
-  }
-
-  .label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    transition: .5s;
-
-  }
-
-  .inputUser:focus ~ .label,
-  .inputUser:valid ~ .label {
-    top: -20px;
-    font-size: 12px;
-    color: dodgerblue;
-  }
-
-  .submit {
-    background-color: aqua;
-    width: 100%;
-    border: none;
-    padding: 15px;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 10px;
-  }
   </style>
 </head>
-<body>
+<body class="body">
   <div class="box">
     <form action="">
       <fieldset>
         <legend><b>Meto-Digital</b></legend>
         <br><br>
         <div class="inputBox">
-          <input type="text" name="nome" id="nome" class="inputUser" required>
-          <label for="nome" class="label">Nome Completo</label>
-        </div>
-        <br><br>
-        <div class="inputBox">
           <input type="email" name="email" id="email" class="inputUser" required>
-          <label for="email" class="label">E-mail</label>
+          <label for="email" class="label">Escreve o teu E-mail</label>
         </div>
         <br><br>
         <div class="inputBox">
@@ -93,26 +88,17 @@ legend {
           <label for="telefone" class="label">Digite o Número com WhatsApp</label>
         </div>
         <br><br>
-        <p>Em que estado você se encontra?</p>
-        <input type="radio" id="livre" name="estado" value="livre" required>
-        <label for="livre">Livre</label>
-        <br>
-        <input type="radio" id="ansioso" name="estado" value="ansioso" required>
-        <label for="ansioso">Ansioso</label>
-        <br>
-        <input type="radio" id="depressivo" name="estado" value="depressivo" required>
-        <label for="depressivo">Depressivo</label>
-        <br>
-        <input type="radio" id="escasso" name="estado" value="escasso" required>
-        <label for="escasso">Escasso</label>
-        <br>
-        <input type="radio" id="travado" name="estado" value="travado" required>
-        <label for="travado">Travado</label>
-        <br><br>
-        <input type="submit" value="Enviar" class="submit">
+        <input type="submit" value="Enviar" class="submit" id="enterWhatsap">
       </fieldset>
     </form>
   </div>
-  
+  <script>
+    function openWhatsap () {
+      const linkWhatsap = 'https://chat.whatsapp.com/EVVi4LwCXOt7aGyYZbY0Aw'
+      window.open(linkWhatsap)
+    }
+    document.getElementById('enterWhatsap').addEventListener('click',openWhatsap)
+
+  </script>
 </body>
 </html>

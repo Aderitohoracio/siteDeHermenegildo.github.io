@@ -1,0 +1,27 @@
+.conteiner {
+    box-sizing: border-box;
+    display: grid;
+    gap: 10px;
+    max-width: 600px;
+    padding: 140px 0 0 0;
+    margin-left: 40px;
+}
+.first-paragraph {
+    font-size: 1.3em;
+}
+@media (max-width: 800px) {
+.conteiner {
+    margin-right: 30px;
+    }
+}
+@media (max-width: 600px) {
+.conteiner {
+    padding-top: 60px;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    }
+.first-paragraph {
+    font-size: 1.1em;
+    }
+}

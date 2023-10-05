@@ -1,21 +1,24 @@
-.information-bg {
-    background: linear-gradient( rgba(132, 132, 10, 0.36), #1c1515);
+
+.imangem {
+    text-align: center;
+}
+.botao {
+    text-align: center;
 }
 
 .information {
     box-sizing: border-box;
     display: grid;
-    gap: 24px;
     max-width: 1200px;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .information h1 {
     text-align: center;
-    color: #b4a90d;
+    color:var(--yellow_01) ;
 }
 
 .information p {
@@ -26,11 +29,18 @@ text-align: center;
 .information-two,
 .information-tree {
 max-width: 600px;
-margin: 0px 16px;
-margin-top: 28px;
-border-style:none;
-border-radius: 4px;
-box-shadow: 0 0 15px #171715;
+margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+.information-one,
+.information-two,
+.information-tree {
+margin-top: 8px;
 padding:10px;
-margin-bottom: 60px;
+margin-bottom: 10px;
+}
+.imangem img {
+    width: 180px;
+    height: 180px;
+}
 }
